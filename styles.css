@@ -1,4 +1,4 @@
-/* Reset de estilos e estilos básicos */
+
 * {
     margin: 0;
     padding: 0;
@@ -51,9 +51,9 @@ nav {
     background: #555;
 }
 
-/* Estilos do menu hambúrguer */
+/
 .burger {
-    display: none; /* Esconde o menu hambúrguer por padrão */
+    display: none; 
     cursor: pointer;
 }
 
@@ -65,7 +65,7 @@ nav {
     transition: transform 0.3s ease;
 }
 
-/* Estilos para dispositivos menores (tablet e smartphone) */
+
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
@@ -88,7 +88,7 @@ nav {
     }
 
     .burger {
-        display: block; /* Mostra o menu hambúrguer */
+        display: block; 
     }
 
     .burger.active .line:nth-child(1) {
