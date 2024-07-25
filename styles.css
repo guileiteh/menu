@@ -1,63 +1,98 @@
-body {
+/* Reset de estilos e estilos básicos */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
 }
 
 .logo {
+    float: left;
     font-size: 1.5rem;
 }
 
+nav {
+    float: right;
+}
+
 .nav-links {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    margin-top: 1rem;
 }
 
 .nav-links li {
-    padding: 0 10px;
+    display: inline-block;
+    margin-left: 1rem;
 }
 
 .nav-links li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
 }
 
+.nav-links li a:hover {
+    background: #555;
+}
+
+/* Estilos do menu hambúrguer */
 .burger {
-    display: none;
-    flex-direction: column;
+    display: none; /* Esconde o menu hambúrguer por padrão */
     cursor: pointer;
 }
 
-.line {
+.burger .line {
     width: 25px;
     height: 3px;
-    background-color: white;
-    margin: 4px;
+    background: #fff;
+    margin: 5px;
+    transition: transform 0.3s ease;
 }
 
+/* Estilos para dispositivos menores (tablet e smartphone) */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: #333;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 0.5rem 0;
     }
 
     .burger {
-        display: flex;
+        display: block; /* Mostra o menu hambúrguer */
     }
 
     .burger.active .line:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 5px);
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
 
     .burger.active .line:nth-child(2) {
@@ -65,36 +100,6 @@ header {
     }
 
     .burger.active .line:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -5px);
-    }
-
-    .burger.active:hover .line {
-        background-color: #ff8000;
-    }
-
-    .burger:hover .line {
-        background-color: #ff8000;
-    }
-
-    .burger.active + .nav-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        transition: all 0.5s ease;
-    }
-
-    .burger.active + .nav-links li {
-        padding: 10px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .burger.active + .nav-links li a {
-        color: white;
-        font-size: 1.2rem;
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }
