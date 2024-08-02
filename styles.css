@@ -1,10 +1,10 @@
-/* Estilos do corpo */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Estilos do cabeçalho */
+
 header {
     background-color: #3300ac;
     color: #fff;
@@ -20,7 +20,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Conteúdo do cabeçalho */
+
 .header-content {
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ header p {
     margin: 5px 0 0;
 }
 
-/* Estilos do botão do menu */
+
 .menu-button {
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@ header p {
     transition: 0.3s;
 }
 
-/* Estilos do menu de navegação */
+
 .nav-menu {
     position: fixed;
     top: 0;
@@ -98,7 +98,7 @@ header p {
     color: #f4a261;
 }
 
-/* Animação do menu hambúrguer */
+
 .menu-button.open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
 }
